@@ -1,0 +1,20 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build output
+frontend/dist/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Database
+backend/dev.db
+backend/dev.db-journal
+
+# OS files
+.DS_Store
+*.pem

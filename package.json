@@ -1,0 +1,10 @@
+{
+  "name": "refine",
+  "version": "1.0.0",
+  "description": "Role-Based Task Manager",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npx prisma generate",
+    "postbuild": "cd backend && npx prisma migrate deploy"
+  }
+}
