@@ -22,7 +22,7 @@ router.post('/register', async (req, res) => {
     res.status(201).json({ message: 'User created successfully', user: { id: user.id, name: user.name, role: user.role } });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Server error' });
+    res.status(500).json({ error: 'Server error', details: err.message });
   }
 });
 
@@ -40,7 +40,7 @@ router.post('/login', async (req, res) => {
     res.json({ token, user: { id: user.id, name: user.name, email: user.email, role: user.role } });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Server error' });
+    res.status(500).json({ error: 'Server error', details: err.message });
   }
 });
 
