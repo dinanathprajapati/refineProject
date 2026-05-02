@@ -33,6 +33,8 @@ EXPOSE 5001
 # Set environment variables
 ENV NODE_ENV=production
 ENV PORT=5001
+ENV DATABASE_URL="file:./dev.db"
+ENV JWT_SECRET="refine_super_secret_key_123!"
 
 # Start the application
 CMD ["npm", "start"]
